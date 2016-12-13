@@ -8,14 +8,15 @@ install:
   - ps: Install-Product node $env:nodejs_version
   # install modules
   - npm install
+  - npm run rebuilt-tests
 
 # Post-install test scripts.
-test_script:
+# test_script:
   # Output useful info for debugging.
-  - node --version
-  - npm --version
+  # - node --version
+  # - npm --version
   # run tests
-  - npm start
+  # - npm test
   
   # Don't actually build.
  build: off
